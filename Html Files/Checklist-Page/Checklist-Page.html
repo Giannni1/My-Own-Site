@@ -1,0 +1,71 @@
+<!-- Code By Gianni Lombardo. This a project and a personal webpage. This page is remined of thing on 
+    different pages. Like the last Journal will be displayed on this page and will pop up after the 
+    journal was posted.
+    
+    Front End:
+    Lenaier gradint for the background and the 6 buttons up top with one dropdown menu on the to do tab
+    and the dropdown menu is Latin,Scince,Ela,Math,Social Studies. The first page is the personal page
+    and the others are for the others
+ 
+    Things That Need TO Be Changed 
+    Make custom checkbox is a seprate css page so not to make multpul of them
+    Make the other 5 pages for the other to do list 
+    Make a container for the checklist.
+-->
+
+
+<head>
+   
+    <title> My Site </title>
+    <link rel="stylesheet" href="CSS/Checklist.css" />
+    <link rel="stylesheet" href="CSS/Custom_Checkbox.css" />
+
+</head>
+
+<body>
+    <div>
+        <ul id="border">
+            <li><a href="../Homepage/HomePage.html">HomePage</a></li>
+
+            <li><a href="../Journal-Page/Journal-Page.html">Journal</a></li>
+
+            <li><a href="../Calander-Page/Calander-Page.html">Calander</a> </li>
+
+            <li class="dropdown"><a href="../Checklist-Page/Checklist-Page.html" >To do</a>
+            <ul class="dropdown-content">
+                <a href="../Checklist-Page/Other-Checklist/Latin-Checklist/Latin-Checklist.html">Latin</a>
+                <a href="../Checklist-Page/Other-Checklist/Scince-Checklist/Scince-Checklist.html">Ac Scince</a>
+                <a href="../Checklist-Page/Other-Checklist/ELA-Checklist/English-Checklist.html">Language Arts</a>
+                <a href="../Checklist-Page/Other-Checklist/Math-Checklist/Math-Checklist.html">Ac Math</a>
+                <a href="../Checklist-Page/Other-Checklist/Social-Studies-Checklist/Social-Studies-Checklist.html">Ac Social Studies</a>
+        </ul>
+            </li>
+
+            <li><a href="../Service-Page/Service-Page.html">Service</a></li>
+
+            <li><a href="../Contact-Page/Contact-Page.html">Contact</a></li> 
+
+        </ul>
+    </div>
+
+    <br />
+    
+    <form class="todo-for-website">
+    <input type="checkbox" id="noiseButton1" />
+    <label for="noiseButton">Highlight the tab and the page we are on</label>
+    <br />
+    <input type="checkbox" id="noiseButton2" />
+    <label for="noiseButton">Change the contact the to the circle and in the time inside of it.</label>
+    <br />
+    <input type="checkbox" id="noiseButton3" />
+    <label for="noiseButton3" >Create The Urn for Quintus</label>
+    
+
+    <label class="container">One
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+    </form>
+    
+</body>
+<script src="Javascript/Checklist.js"></script>

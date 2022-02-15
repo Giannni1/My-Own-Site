@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+/* Here is the body style where we change the background */
+body{
+	background: linear-gradient(135deg, #5b5b5b, #00e696);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  background-color: white;
+  
+}
+
+#border {
+border-radius: 50px;
+}
+
+li {
+  float: left;
+  width: 16.667%;
+  transition-duration: 0.5s;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition-duration: 1s;
+  font-family: 'Inter', sans-serif;
+  
+}
+li:hover {
+  background-color: #5b5b5b;
+}
+
+li a:hover {
+  background-color: #36454F; 
+  color: white;
+  
+}
+
+
+#homepageLink {
+background-color: #CCCCCC;
+}
+
+.dropdown li {
+position: relative;
+display: inline-block;
+border-radius: 10px;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #CCCCCC;
+width: 17%;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+border-radius: 10px;
+}
+
+.dropdown-content a {
+color: black;
+padding: 14px;
+text-decoration: none;
+display: block;
+font-family: 'Inter', sans-serif;
+}
+
+.dropdown-content a:hover {background-color:#00e696; color: black;}
+
+.dropdown:hover .dropdown-content{display:block;}
+
+
+.todo-for-website {
+	background-color: white;
+	width: 500px;
+	height: 400px;
+	position: absolute;
+	top: 25%;
+
+
+}

@@ -1,0 +1,107 @@
+<!-- Code By Gianni Lombardo. 
+Problems: 
+1. The checkboxs on lines 42 - 47 are not working. They work but the text/label for the custom checkbox does
+not line up with the custom check box. They should line up. I tried putting it into a p tag and give it it's own
+class but gave same result. I tried a br tag as well but no luck.
+
+Goals: 
+1. I want to be able to press a button and a new checkbox come up with a alert that ask me what I want it to say and
+what I want to set as the due date, then when the due date is 2 and 1 day away it will alert me by gmailing me. I have 
+found a library that seems to do this: https://www.tutorialspoint.com/javamail_api/javamail_api_overview.html. This 
+should be able to gmail me when I send a request to.
+
+
+-->
+<html>
+<head>
+    <title>My Site: Social Studies</title>
+    <link rel="stylesheet" href="../../CSS/Custom_Checkbox.css" />
+    <link rel="stylesheet" href="Social-Studies-Checklist.css" />
+    <script src="https://kit.fontawesome.com/d413f32e8d.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+
+    <script type="text/javascript">
+
+        var test = "something"
+
+        $(document).ready(function(){
+                // for starting the confetti 
+
+                const cistart = () => {
+                setTimeout(function() {
+                confetti.start()
+                }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+        };
+
+            //  for stopping the confetti 
+
+            const cistop = () => {
+                setTimeout(function() {
+                confetti.stop()
+                }, 2000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+            };  
+
+
+            $(".giannisCheckbox").change(function() {
+                 if(chkbx002.checked || chkbx001.checked) {
+                var audio = new Audio('../../Audio/pleasntDing.mp3');
+                console.log('This is working')
+                audio.play()
+                cistart();
+                cistop();           
+            
+            }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <ul id="border">
+            <li><a href="../../../Homepage/HomePage.html">HomePage</a></li>
+            <li><a href="../../../Journal-Page/Journal-Page.html">Journal</a></li>
+            <li><a href="../../../Calander-Page/Calander-Page.html">Calander</a> </li>
+            <li class="dropdown"><a href="../../../Checklist-Page/Checklist-Page.html" >To do</a>
+            <ul class="dropdown-content">
+                <a href="../Latin-Checklist/Latin-Checklist.html">Latin</a>
+                <a href="../Scince-Checklist/Scince-Checklist.html">Ac Scince</a>
+                <a href="../ELA-Checklist/English-Checklist.html">Language Arts</a>
+                <a href="../Math-Checklist/Math-Checklist.html">Ac Math</a>
+                <a href="../Social-Studies-Checklist/Social-Studies-Checklist.html">Ac Social Studies</a>
+
+
+
+            </ul>
+            </li>
+            <li><a href="../../../Service-Page/Service-Page.html">Service</a></li>
+            <li><a href="../../../Contact-Page/Contact-Page.html">Contact</a></li> 
+
+        </ul>
+    </div>
+    
+    <div class="middle-checklist-box-social">
+        <label class="container" > 
+            <input id="chkbx001" class="giannisCheckbox" type="checkbox" >
+            <span class="checkbox-label-class">Social Studies Unit 8 Review (Graded)</span>
+        </label>
+        <!-- Put in a grey line that seperates the checkbox from the others  -->
+        <p class="chkbxLowerLine"></p>
+        <!-- New Checkbox here under the line  -->
+        <label class="container" > 
+            <input id="chkbx002" class="giannisCheckbox" type="checkbox">
+            <span class="checkbox-label-class">Georgia 3.2.1. GO Project</span>
+        </label>
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+
+<script src="../../JavaScript/confetti.js"></script>
+</body>
+</html>
